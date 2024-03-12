@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --branco: #ffffff;
+    --background: #f0e7fe;
+    --cor-primaria: #1b024a;
+    --cor-secundaria: #e0cefd;
+    --cor-terciaria: #c19dfb;
+    --cinza-claro: #ADB5BD;
+    --cinza-escuro: #343A40;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    background: var(--background);
+    font: 400 0.9rem "Inter", sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 9vw;
+    height: 7vh;
+    margin: 2rem;
+}
+
+#digite-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 7.5rem 0 4rem;
+}
+
+#inserir-texto{
+    color: var(--cor-primaria);
+    font: 400 1.25rem "Inter", sans-serif;
+    width: 49.5vw;
+    height: 101.5vh;
+    background: var(--background);
+    outline: none;
+    border: none;
+    resize: none;    
+}
+
+#inserir-texto::placeholder{
+    color: var(--cor-primaria);
+    font: 400 1.25rem "Inter", sans-serif;
+}
+
+.texto-atencao{
+    color: var(--cinza-escuro);
+    font: 400 0.80rem "Inter", sans-serif;
+    display: flex;
+    gap: 0.3rem;
+    margin: 0.6rem;
+}
+
+.botao{
+    width: 23.5vw;
+    height: 9.5vh;
+    margin: 0.30rem;
+    background: var(--background);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 24px;
+    color: var(--cor-primaria);
+    font: 400 1rem "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.botao:hover{
+    background: var(--cor-secundaria);
+}
+
+.botao:active{
+    background: var(--cor-primaria);
+    color: var(--background);
+}
+
+#coluna-resultado{
+    background: var(--branco);
+    width: 29vw;
+    height: 137vh;
+    margin: 2.5rem;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+#mensagem-nenhum-resultado {
+    margin: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagem-nenhum-resultado {
+    width: 24.5vw;
+    height: 44vh;
+    margin-bottom: 3.1rem;
+}
+
+.mensagem-1{
+    width: 24.5vw;
+    height: 8.4vh;
+    color: var(--cinza-escuro);
+    font: 700 1.5rem "Inter", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mensagem-2{
+    width: 24.5vw;
+    height: 7vh;
+    color: var(--cinza-escuro);
+    font: 400 1rem "Inter", sans-serif;
+    text-align: center;
+}
+
+#exibir-resultado{
+    color: var(--cor-primaria);
+    font: 400 1.25rem "Inter", sans-serif;
+    display: none;
+}
+
+#mensagem-final{
+    width: 24.5vw;
+    height: 113vh;
+    margin: 2rem 2rem 0 2rem;
+    word-wrap: break-word;
+    overflow: auto;  
+}
+
+.botao-copiar{
+    margin: 2.2rem;
+}
+
+#footer{
+    background: var(--cor-terciaria);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font: 400 1rem "Inter", sans-serif; 
+}
+
+#footer p{
+    margin-right: 0.3rem;
+    color: var(--cinza-escuro);}
+
+
+#footer a{
+    text-decoration: none;
+    color: var(--cor-primaria);     
+}
+
+@media screen and (min-width: 600px) and (max-width:1024px){
+    #main{
+        display: block;
+        background: var(--background);
+        overflow: auto;
+    }
+
+    #digite-texto{
+        height: 50vh;
+        margin: 2.5rem 2.5rem 0 2.5rem;
+    }
+
+    #inserir-texto{
+        width: 90vw;
+        height: 61vh;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #inserir-texto::placeholder{
+        font-size: 1.5rem;
+    }
+
+    .botao{
+        width: 43vw;
+        height: 6vh;
+    }
+
+    #coluna-resultado{
+        width: 90vw;
+        height: 50vh;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imagem-nenhum-resultado{
+        display: none;
+    }
+    
+    .mensagem-1, .mensagem-2{
+        width: 100%;
+        height: 2vh;
+        margin: 0.8rem;
+    }
+
+    #exibir-resultado{
+        width: 90vw;
+        height: 42vh;
+        padding: 0 1.5rem;
+    }
+
+    #mensagem-final{
+        width: 40rem;
+        height: 16rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .botao-copiar{
+        margin: 1rem;
+        width: 38rem;
+    }
+    
+}
